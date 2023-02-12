@@ -8,7 +8,7 @@ import logo from "../assets/logo.png"
 
 const Navigation = () => {
   return (
-        <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg">
       <Container>
       <LinkContainer to ="/">
         <Navbar.Brand ><img src={logo} style={{width:50,height:50}}  alt="" /></Navbar.Brand>
@@ -22,12 +22,7 @@ const Navigation = () => {
           <LinkContainer to ="/chat">
             <Nav.Link >Chat</Nav.Link>
           </LinkContainer>
-          <LinkContainer to ="/login">
-            <Nav.Link >Home</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to ="/login">
-            <Nav.Link >Home</Nav.Link>
-          </LinkContainer>
+          
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
