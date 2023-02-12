@@ -91,7 +91,7 @@ const Signup = () => {
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <Button variant="primary" type="submit">
-        Login
+        {uploadingImg ? "Signing you up.." : "Signup" }
       </Button>
       <div className="py-4">
         <p className="text-center">

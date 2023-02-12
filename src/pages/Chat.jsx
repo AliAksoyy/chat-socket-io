@@ -1,8 +1,20 @@
 import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import MessageForm from '../components/MessageForm'
+import Sidebar from '../components/Sidebar'
 
 const Chat = () => {
   return (
-    <div>Chat</div>
+    <Container>
+      <Row>
+        <Col>
+          <Sidebar />
+        </Col>
+        <Col>
+        <MessageForm />
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
