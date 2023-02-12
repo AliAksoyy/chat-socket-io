@@ -8,10 +8,10 @@ const Chat = () => {
     <Container>
       <Row>
         <Col>
-          <Sidebar />
+          <Sidebar md={4} />
         </Col>
         <Col>
-        <MessageForm />
+        <MessageForm md={8} />
         </Col>
       </Row>
     </Container>
