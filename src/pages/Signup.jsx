@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
 import logo from "../assets/ali.webp"
 import "./Signup.css"
-
+import {useSignupUserMutation} from "../services/appApi"
 
 
 
@@ -15,8 +16,8 @@ const Signup = () => {
   const [image,setImage]=useState(null)
   const [uploadingImg,setUploadingImg]=useState(false)
   const [imagePreview,setImagePreview]=useState("")
-
-
+  const [signupUser, {isLoading,error}] =useSignupUserMutation()
+  const navigate=useNavigate()
   
   function validateImg(e) {
     const file =e.target.files[0]
@@ -59,6 +60,12 @@ const Signup = () => {
     if(!image) return alert("Please upload your profile picture")
     const url = await uploadImage(image);
     console.log(url)
+    signupUser({name,email,password,picture:url}).then(({data})=> {
+      if(data){
+        console.log(data);
+        navigate("/chat")
+      }
+    })
   }
 
 
