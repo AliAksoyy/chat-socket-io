@@ -10,6 +10,7 @@ const userSlice = createSlice({
     reducers: {
         addNotifications:(state,{payload})=> {},
         resetNotifications:(state,{payload})=> {},
+        
     },
     extraReducers: (builder)=> {
         // save user after signup
